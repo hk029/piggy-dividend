@@ -1,6 +1,7 @@
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { useState, memo } from 'react'
+import TabBar from '@/components/TabBar'
 import './index.scss'
 
 type TabType = 'all' | 'received' | 'pending'
@@ -14,7 +15,6 @@ const LedgerPage = memo(() => {
     { key: 'pending', label: '待到账' },
   ]
 
-  // 空状态
   return (
     <View className='ledger'>
       <View className='ledger__header'>
@@ -34,7 +34,7 @@ const LedgerPage = memo(() => {
       </View>
 
       <View className='ledger__empty'>
-        <Image className='ledger__empty-img' src='/assets/images/empty-ledger.png' mode='aspectFit' />
+        <View className='ledger__empty-piggy'>🐷📖</View>
         <Text className='ledger__empty-title'>还没有分红记录</Text>
         <Text className='ledger__empty-desc'>等第一笔分红到账，这里会帮你记成清清楚楚的攒息账本。</Text>
         <View className='ledger__empty-btn' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
@@ -60,6 +60,8 @@ const LedgerPage = memo(() => {
           <Text className='ledger__summary-compare'>较上月 —</Text>
         </View>
       </View>
+
+      <TabBar active='ledger' />
     </View>
   )
 })

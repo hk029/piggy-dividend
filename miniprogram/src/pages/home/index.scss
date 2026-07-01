@@ -40,10 +40,9 @@
     padding: $spacing-xl $spacing-lg;
   }
 
-  &__empty-img {
-    width: 100%;
-    height: 420rpx;
-    margin-bottom: $spacing-base;
+  &__empty-piggy {
+    font-size: 200rpx;
+    margin-bottom: $spacing-lg;
   }
 
   &__empty-title {
@@ -109,8 +108,8 @@
   }
 
   &__stat-icon {
-    width: 56rpx;
-    height: 56rpx;
+    font-size: 40rpx;
+    display: block;
     margin-bottom: $spacing-sm;
   }
 

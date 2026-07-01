@@ -1,6 +1,7 @@
 import { View, Text, Switch } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { useState, memo } from 'react'
+import TabBar from '@/components/TabBar'
 import './index.scss'
 
 const MinePage = memo(() => {
@@ -68,6 +69,8 @@ const MinePage = memo(() => {
       <View className='mine__version'>
         <Text className='mine__version-text'>小猪攒息 v1.0.0</Text>
       </View>
+
+      <TabBar active='mine' />
     </View>
   )
 })

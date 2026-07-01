@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  background: $card-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.04);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 999;
+
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12rpx 0;
+  }
+
+  &__icon {
+    font-size: 40rpx;
+    margin-bottom: 4rpx;
+  }
+
+  &__label {
+    font-size: 20rpx;
+    color: $text-gray;
+  }
+
+  &__item--active &__label {
+    color: $dividend-red;
+    font-weight: 500;
+  }
+}

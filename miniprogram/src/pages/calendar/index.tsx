@@ -1,29 +1,11 @@
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { useState, memo } from 'react'
+import TabBar from '@/components/TabBar'
 import './index.scss'
 
 const CalendarPage = memo(() => {
   const [currentMonth] = useState({ year: 2025, month: 7 })
-
-  const weekDays = ['日', '一', '二', '三', '四', '五', '六']
-
-  // 生成空日历
-  const generateDays = () => {
-    const days = []
-    const firstDay = new Date(currentMonth.year, currentMonth.month - 1, 1).getDay()
-    const daysInMonth = new Date(currentMonth.year, currentMonth.month, 0).getDate()
-    
-    for (let i = 0; i < firstDay; i++) {
-      days.push({ day: 0, type: 'empty' as const })
-    }
-    
-    for (let i = 1; i <= daysInMonth; i++) {
-      days.push({ day: i, type: 'normal' as const })
-    }
-    
-    return days
-  }
 
   return (
     <View className='calendar'>
@@ -38,7 +20,7 @@ const CalendarPage = memo(() => {
       </View>
 
       <View className='calendar__empty'>
-        <Image className='calendar__empty-img' src='/assets/images/empty-calendar.png' mode='aspectFit' />
+        <View className='calendar__empty-piggy'>🐷📅</View>
         <Text className='calendar__empty-title'>日历还没有安排</Text>
         <Text className='calendar__empty-desc'>添加资产后，预计到账时间会在这里慢慢排开。</Text>
         <View className='calendar__empty-btn' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
@@ -61,6 +43,8 @@ const CalendarPage = memo(() => {
           <Text className='calendar__summary-value'>—</Text>
         </View>
       </View>
+
+      <TabBar active='calendar' />
     </View>
   )
 })

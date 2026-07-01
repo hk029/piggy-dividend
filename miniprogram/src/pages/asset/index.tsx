@@ -1,6 +1,7 @@
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { useState, memo } from 'react'
+import TabBar from '@/components/TabBar'
 import './index.scss'
 
 type AssetTab = 'mine' | 'watch'
@@ -31,7 +32,7 @@ const AssetPage = memo(() => {
 
       {activeTab === 'mine' && (
         <View className='asset__empty'>
-          <Image className='asset__empty-img' src='/assets/images/empty-asset.png' mode='aspectFit' />
+          <View className='asset__empty-piggy'>🐷💰</View>
           <Text className='asset__empty-title'>你还没有资产</Text>
           <Text className='asset__empty-desc'>添加持有资产后，可以看到我的平均股息率、下次预计到账和今年已攒息。</Text>
           <View className='asset__empty-btn'>
@@ -46,7 +47,7 @@ const AssetPage = memo(() => {
 
       {activeTab === 'watch' && (
         <View className='asset__empty'>
-          <Image className='asset__empty-img' src='/assets/images/empty-asset.png' mode='aspectFit' />
+          <View className='asset__empty-piggy'>🐷👀</View>
           <Text className='asset__empty-title'>还没有关注资产</Text>
           <Text className='asset__empty-desc'>关注心仪的好资产，等合适时机一起攒息。</Text>
           <View className='asset__empty-btn'>
@@ -79,6 +80,8 @@ const AssetPage = memo(() => {
           <Text className='asset__stat-unit'>元</Text>
         </View>
       </View>
+
+      <TabBar active='asset' />
     </View>
   )
 })
