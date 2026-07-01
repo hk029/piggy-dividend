@@ -37,10 +37,10 @@ const LedgerPage = memo(() => {
         <View className='ledger__empty-piggy'>🐷📖</View>
         <Text className='ledger__empty-title'>还没有分红记录</Text>
         <Text className='ledger__empty-desc'>等第一笔分红到账，这里会帮你记成清清楚楚的攒息账本。</Text>
-        <View className='ledger__empty-btn' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
+        <View className='ledger__empty-btn' onClick={() => Taro.redirectTo({ url: '/pages/asset/index' })}>
           <Text className='ledger__empty-btn-text'>去添加资产</Text>
         </View>
-        <View className='ledger__empty-link' onClick={() => Taro.switchTab({ url: '/pages/calendar/index' })}>
+        <View className='ledger__empty-link' onClick={() => Taro.redirectTo({ url: '/pages/calendar/index' })}>
           <Text className='ledger__empty-link-text'>先看看攒息日历</Text>
           <Text className='ledger__empty-link-arrow'>›</Text>
         </View>

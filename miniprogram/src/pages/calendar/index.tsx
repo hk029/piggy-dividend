@@ -23,7 +23,7 @@ const CalendarPage = memo(() => {
         <View className='calendar__empty-piggy'>🐷📅</View>
         <Text className='calendar__empty-title'>日历还没有安排</Text>
         <Text className='calendar__empty-desc'>添加资产后，预计到账时间会在这里慢慢排开。</Text>
-        <View className='calendar__empty-btn' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
+        <View className='calendar__empty-btn' onClick={() => Taro.redirectTo({ url: '/pages/asset/index' })}>
           <Text className='calendar__empty-btn-text'>去添加资产</Text>
         </View>
         <View className='calendar__empty-link'>

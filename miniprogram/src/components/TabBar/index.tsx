@@ -28,7 +28,7 @@ interface TabBarProps {
 const TabBar = memo(({ active }: TabBarProps) => {
   const handleTabClick = (tab: TabItem) => {
     if (tab.key === active) return
-    Taro.switchTab({ url: tab.path })
+    Taro.redirectTo({ url: tab.path })
   }
 
   return (

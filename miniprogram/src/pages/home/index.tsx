@@ -18,10 +18,10 @@ const HomePage = memo(() => {
         <View className='home__empty-piggy'>🐷</View>
         <Text className='home__empty-title'>还没开始攒息</Text>
         <Text className='home__empty-desc'>添加第一笔资产后，小猪会帮你慢慢攒起每一笔分红。</Text>
-        <View className='home__empty-btn' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
+        <View className='home__empty-btn' onClick={() => Taro.redirectTo({ url: '/pages/asset/index' })}>
           <Text className='home__empty-btn-text'>添加第一笔资产</Text>
         </View>
-        <View className='home__empty-link' onClick={() => Taro.switchTab({ url: '/pages/asset/index' })}>
+        <View className='home__empty-link' onClick={() => Taro.redirectTo({ url: '/pages/asset/index' })}>
           <Text className='home__empty-link-text'>先去看看关注资产</Text>
           <Text className='home__empty-link-arrow'>›</Text>
         </View>
