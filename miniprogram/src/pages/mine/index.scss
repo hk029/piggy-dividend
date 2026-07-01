@@ -1,0 +1,131 @@
+@import "../../styles/variables.scss";
+
+.mine {
+  min-height: 100vh;
+  background: $brand-bg;
+  padding-bottom: 120rpx;
+
+  &__header {
+    padding: 100rpx $spacing-lg $spacing-base;
+  }
+
+  &__title {
+    font-size: $fs-xl;
+    font-weight: 600;
+    color: $safe-green;
+  }
+
+  // 用户信息
+  &__user {
+    display: flex;
+    align-items: center;
+    background: $card-white;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    margin: 0 $spacing-lg $spacing-base;
+    box-shadow: $shadow-sm;
+  }
+
+  &__avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    background: $light-red-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-lg;
+  }
+
+  &__avatar-text {
+    font-size: 64rpx;
+  }
+
+  &__user-info {
+    flex: 1;
+  }
+
+  &__user-name {
+    font-size: $fs-lg;
+    font-weight: 500;
+    color: $text-dark;
+    display: block;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__user-id {
+    font-size: $fs-sm;
+    color: $text-gray;
+  }
+
+  // 快捷设置
+  &__settings {
+    background: $card-white;
+    border-radius: $radius-lg;
+    margin: 0 $spacing-lg $spacing-base;
+    box-shadow: $shadow-sm;
+  }
+
+  &__setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-lg;
+    border-bottom: 1rpx solid #F5F5F5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__setting-label {
+    font-size: $fs-base;
+    color: $text-dark;
+  }
+
+  // 菜单列表
+  &__menu {
+    background: $card-white;
+    border-radius: $radius-lg;
+    margin: 0 $spacing-lg;
+    box-shadow: $shadow-sm;
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    padding: $spacing-lg;
+    border-bottom: 1rpx solid #F5F5F5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__menu-icon {
+    font-size: 40rpx;
+    margin-right: $spacing-base;
+  }
+
+  &__menu-text {
+    flex: 1;
+    font-size: $fs-base;
+    color: $text-dark;
+  }
+
+  &__menu-arrow {
+    font-size: $fs-lg;
+    color: $text-light;
+  }
+
+  // 版本信息
+  &__version {
+    text-align: center;
+    padding: $spacing-xl 0;
+  }
+
+  &__version-text {
+    font-size: $fs-sm;
+    color: $text-light;
+  }
+}

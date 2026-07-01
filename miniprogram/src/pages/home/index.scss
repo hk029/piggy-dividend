@@ -1,0 +1,144 @@
+@import "../../styles/variables.scss";
+
+.home {
+  min-height: 100vh;
+  background: $brand-bg;
+  padding: 0 $spacing-lg;
+  padding-bottom: 120rpx;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100rpx;
+    padding-bottom: $spacing-base;
+  }
+
+  &__title {
+    font-size: $fs-xl;
+    font-weight: 600;
+    color: $safe-green;
+  }
+
+  &__notice {
+    width: 64rpx;
+    height: 64rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__notice-icon {
+    font-size: 40rpx;
+  }
+
+  // Empty 状态
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  &__empty-img {
+    width: 100%;
+    height: 420rpx;
+    margin-bottom: $spacing-base;
+  }
+
+  &__empty-title {
+    font-size: 44rpx;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__empty-desc {
+    font-size: $fs-sm;
+    color: $text-gray;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    padding: 0 $spacing-xl;
+    line-height: 1.6;
+  }
+
+  &__empty-btn {
+    background: linear-gradient(135deg, #E85D4A 0%, $dividend-red 100%);
+    border-radius: $radius-round;
+    padding: 30rpx 80rpx;
+    margin-bottom: $spacing-base;
+    box-shadow: 0 8rpx 24rpx rgba(232, 93, 74, 0.3);
+  }
+
+  &__empty-btn-text {
+    font-size: $fs-lg;
+    font-weight: 600;
+    color: #FFF;
+  }
+
+  &__empty-link {
+    display: flex;
+    align-items: center;
+    gap: 8rpx;
+  }
+
+  &__empty-link-text {
+    font-size: $fs-sm;
+    color: $text-gray;
+  }
+
+  &__empty-link-arrow {
+    font-size: $fs-base;
+    color: $text-gray;
+  }
+
+  // 统计卡片
+  &__stats {
+    display: flex;
+    padding: 0 $spacing-base;
+    gap: $spacing-sm;
+    margin-top: $spacing-base;
+  }
+
+  &__stat-item {
+    flex: 1;
+    background: $card-white;
+    border-radius: 20rpx;
+    padding: $spacing-lg $spacing-base;
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  }
+
+  &__stat-icon {
+    width: 56rpx;
+    height: 56rpx;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__stat-label {
+    font-size: $fs-xs;
+    color: $text-gray;
+    display: block;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__stat-value {
+    font-size: $fs-xl;
+    font-weight: 700;
+    color: $text-dark;
+    display: block;
+    margin-bottom: 8rpx;
+  }
+
+  &__stat-count {
+    font-size: 56rpx;
+    font-weight: 700;
+    color: $text-dark;
+    display: block;
+    margin-bottom: 8rpx;
+  }
+
+  &__stat-compare {
+    font-size: $fs-xxs;
+    color: $text-light;
+  }
+}
